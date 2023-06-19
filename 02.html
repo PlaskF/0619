@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame Animation</title>
+    <script>
+        window.onload = function () {
+            // 변수 선언
+            var count = 0
+            var image = document.getElementById('image')
+            var frames = [
+                '0.png','1.png','2.png','3.png',
+                '4.png','5.png','6.png','7.png' 
+            ]
+            // 타이머 반복 시작
+            setInterval(function () {
+                image.src = "imgs/"+frames[count++ % frames.length]
+            }, 1000/frames.length)
+        }
+    </script>
+</head>
+<body>
+    <img id="image">
+</body>
+</html>
